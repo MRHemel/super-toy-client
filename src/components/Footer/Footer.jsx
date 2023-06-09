@@ -3,7 +3,7 @@ import logo from '../../assets/images/super-toy-logo-removebg-preview.png'
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-300 text-base-content">
+        <footer className="footer p-10 bg-[#FFE8CC] text-base-content">
             <div>
                 <img className='w-72' src={logo} alt="" />
                 <p className="font-bold">
