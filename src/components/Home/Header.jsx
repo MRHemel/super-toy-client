@@ -1,18 +1,37 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../assets/images/super-toy-logo-removebg-preview.png'
 import { Link } from 'react-router-dom';
 import { FaUser } from 'react-icons/fa';
+import { AuthContext } from '../provider/AuthProvider';
 
 const Header = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => {
+                console.log(error)
+            })
+
+    }
+
+
     const navItems = <>
         <li><Link to={'/'}>Home</Link></li>
 
         <li><Link>All Toys</Link></li>
-        <li><Link to={'/mytoy'}>My Toys</Link></li>
-        <li><Link to={'/addtoy'}>Add a Toy</Link></li>
         <li><Link to={'/blog'}>Blogs</Link></li>
-        <li><Link to={'/login'}>Login</Link></li>
-        <li><Link to={'/register'}>Register</Link></li>
+        {
+            user ? <> <li><Link to={'/mytoy'}>My Toys</Link></li>
+                <li><Link to={'/addtoy'}>Add a Toy</Link></li>
+                <li><Link><button onClick={handleLogOut}>LogOut</button></Link></li></> :
+                <>
+                    <li><Link to={'/login'}>Login</Link></li>
+                    <li><Link to={'/register'}>Register</Link></li></>
+        }
     </>
     return (
         <div className="navbar bg-base-100">
