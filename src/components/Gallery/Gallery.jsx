@@ -5,11 +5,12 @@ const Gallery = ({ toy }) => {
     const { Picture, Name } = toy;
     // console.log(toy.Picture)
     return (
-        <div>
-            <img src={Picture} alt="" />
-            <p>{Name}</p>
+        <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card-body">
+                <h2 className="card-title">{Name}</h2>
 
-
+            </div>
+            <figure><img src={Picture} alt="Shoes" /></figure>
         </div>
     );
 };
