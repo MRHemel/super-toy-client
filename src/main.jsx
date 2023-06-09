@@ -12,6 +12,9 @@ import ErrorPage from './components/ErrorPage.jsx';
 import Home from './components/Home/Home.jsx';
 import Login from './components/Login/Login.jsx';
 import Register from './components/Login/Register.jsx';
+import AddToy from './components/AddToy/AddToy.jsx';
+import Blogs from './components/Blogs/Blogs.jsx';
+import MyToy from './components/MyToy/MyToy.jsx';
 
 
 
@@ -33,6 +36,18 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>
+      },
+      {
+        path: '/addtoy',
+        element: <AddToy></AddToy>
+      },
+      {
+        path: '/blog',
+        element: <Blogs></Blogs>
+      },
+      {
+        path: '/mytoy',
+        element: <MyToy></MyToy>
       }
     ],
   },
