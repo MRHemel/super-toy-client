@@ -13,7 +13,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <h1 className='text-5xl font-extrabold text-center mb-5'>Toys Gallery</h1>
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid grid-cols-5 gap-4'>
                 {
                     toys.map(toy => <Gallery
                         key={toy._id}
