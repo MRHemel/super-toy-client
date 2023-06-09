@@ -16,6 +16,7 @@ import AddToy from './components/AddToy/AddToy.jsx';
 import Blogs from './components/Blogs/Blogs.jsx';
 import MyToy from './components/MyToy/MyToy.jsx';
 import AuthProvider from './components/provider/AuthProvider.jsx';
+import PrivateRoute from './components/PrivateRoute.jsx';
 
 
 
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/addtoy',
-        element: <AddToy></AddToy>
+        element: <PrivateRoute><AddToy></AddToy></PrivateRoute>
       },
       {
         path: '/blog',
@@ -48,7 +49,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/mytoy',
-        element: <MyToy></MyToy>,
+        element: <PrivateRoute><MyToy></MyToy></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/addingtoy')
       }
     ],
