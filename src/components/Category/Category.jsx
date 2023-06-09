@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import ToyCard from '../ToyCard/ToyCard';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Category = ({ toys }) => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
     const marvel = toys.filter(toy => toy.Category === "Marvel")
     const dc = toys.filter(toy => toy.Category === "DC")
     const transformers = toys.filter(toy => toy.Category === "Transformers")
@@ -18,7 +26,7 @@ const Category = ({ toys }) => {
             </TabList>
 
             <TabPanel>
-                <div className='grid grid-cols-3 gap-5'>
+                <div className='grid grid-cols-3 gap-5' data-aos="fade-up-right" data-aos-duration="3000">
                     {
                         marvel.map(toy => <ToyCard
                             key={toy._id}
@@ -28,7 +36,7 @@ const Category = ({ toys }) => {
 
             </TabPanel>
             <TabPanel>
-                <div className='grid grid-cols-3 gap-5'>
+                <div className='grid grid-cols-3 gap-5' data-aos="flip-up" data-aos-duration="3000">
                     {
                         dc.map(toy => <ToyCard
                             key={toy._id}
@@ -37,7 +45,7 @@ const Category = ({ toys }) => {
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className='grid grid-cols-3 gap-5'>
+                <div className='grid grid-cols-3 gap-5' data-aos="fade-up-left" data-aos-duration="3000">
                     {
                         transformers.map(toy => <ToyCard
                             key={toy._id}

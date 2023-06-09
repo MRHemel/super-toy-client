@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import banner from '../assets/images/banner.jpg'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const Banner = () => {
+
+    useEffect(() => {
+        AOS.init();
+    }, []);
     return (
-        <div className="banner flex mt-4 mb-8">
+        <div className="banner flex mt-4 mb-8" data-aos="slide-left" data-aos-duration="3000">
             <div className="image-container w-1/2">
                 <img src={banner} alt="Banner" />
             </div>
