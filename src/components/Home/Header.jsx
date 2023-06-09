@@ -12,6 +12,7 @@ const Header = () => {
         <li><Link>Add a Toy</Link></li>
         <li><Link to={'/blog'}>Blogs</Link></li>
         <li><Link to={'/login'}>Login</Link></li>
+        <li><Link to={'/register'}>Register</Link></li>
     </>
     return (
         <div className="navbar bg-base-100">
@@ -28,7 +29,7 @@ const Header = () => {
                 <Link to={'/'}><h1 className='text-5xl font-extrabold'>Super Toy</h1></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-2xl">
+                <ul className="menu menu-horizontal px-1 text-xl">
                     {navItems}
                 </ul>
             </div>
