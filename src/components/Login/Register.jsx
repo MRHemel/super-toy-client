@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     return (
@@ -14,26 +15,32 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Name</span>
                             </label>
-                            <input type="text" placeholder="Enter your name" className="input input-bordered" />
+                            <input type="text" placeholder="Enter your name" name='name' className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="text" placeholder="email" className="input input-bordered" />
+                            <input type="text" placeholder="Enter your email" name='email' className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" placeholder="password" className="input input-bordered" />
+                            <input type="text" placeholder="Enter your password" name='password' className="input input-bordered" />
+
+                        </div>
+                        <div className="form-control">
                             <label className="label">
-                                <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                <span className="label-text">Photo URL</span>
                             </label>
+                            <input type="text" placeholder="Enter your photo url" name='photo' className="input input-bordered" />
+
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-primary">Register</button>
                         </div>
+                        <p>Already have an account? <Link className='font-extrabold text-cyan-950' to={'/login'}>Login</Link></p>
                     </div>
                 </div>
             </div>
