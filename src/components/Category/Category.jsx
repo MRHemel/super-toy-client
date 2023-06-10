@@ -26,7 +26,7 @@ const Category = ({ toys }) => {
             </TabList>
 
             <TabPanel>
-                <div className='grid grid-cols-3 gap-5' data-aos="fade-up-right" data-aos-duration="3000">
+                <div className='grid lg:grid-cols-3 gap-5 sm:grid-cols-1 md:grid-cols-2' data-aos="fade-up-right" data-aos-duration="3000">
                     {
                         marvel.map(toy => <ToyCard
                             key={toy._id}
@@ -36,7 +36,7 @@ const Category = ({ toys }) => {
 
             </TabPanel>
             <TabPanel>
-                <div className='grid grid-cols-3 gap-5' data-aos="flip-up" data-aos-duration="3000">
+                <div className='grid lg:grid-cols-3 gap-5 sm:grid-cols-1 md:grid-cols-2' data-aos="flip-up" data-aos-duration="3000">
                     {
                         dc.map(toy => <ToyCard
                             key={toy._id}
@@ -45,7 +45,7 @@ const Category = ({ toys }) => {
                 </div>
             </TabPanel>
             <TabPanel>
-                <div className='grid grid-cols-3 gap-5' data-aos="fade-up-left" data-aos-duration="3000">
+                <div className='grid lg:grid-cols-3 gap-5 sm:grid-cols-1 md:grid-cols-2' data-aos="fade-up-left" data-aos-duration="3000">
                     {
                         transformers.map(toy => <ToyCard
                             key={toy._id}

@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/toys')
+        loader: () => fetch('https://super-toy-server-delta.vercel.app/toys')
       },
       {
         path: '/login',
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: '/mytoy',
         element: <PrivateRoute><MyToy></MyToy></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/addingtoy')
+        loader: () => fetch('https://super-toy-server-delta.vercel.app/addingtoy')
       }
     ],
   },

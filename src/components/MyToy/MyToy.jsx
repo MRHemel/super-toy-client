@@ -7,7 +7,7 @@ const MyToy = () => {
     const myToys = useLoaderData()
     // console.log(myToys)
     return (
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2'>
             {
                 myToys.map(myToy => <MyToyCard
                     key={myToy._id}

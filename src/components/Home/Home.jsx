@@ -21,7 +21,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <h1 className='text-5xl font-extrabold text-center mb-5' data-aos="slide-up" data-aos-duration="3000">Toys Gallery</h1>
-            <div className='grid grid-cols-5 gap-4' data-aos="fade-up" data-aos-duration="3000">
+            <div className='grid lg:grid-cols-5 gap-4 sm:grid-cols-2 md:grid-cols-3' data-aos="fade-up" data-aos-duration="3000">
                 {
                     toys.map(toy => <Gallery
                         key={toy._id}

@@ -20,7 +20,7 @@ const AddToy = () => {
         }
         console.log(userToy)
 
-        fetch('http://localhost:5000/addingtoy', {
+        fetch('https://super-toy-server-delta.vercel.app/addingtoy', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
